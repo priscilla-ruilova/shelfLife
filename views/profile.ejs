@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <title>Fridge Item Tracker</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="profileBackground">
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span>The People's Fridge</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <!-- <div class="row"> -->
+
+        <!-- LOCAL INFORMATION -->
+        <div class="fridgeInventory text-center">
+          <h2>Fridge Items</h2>
+          <ul class="products">
+          <% for(var i=0; i<products.length; i++) {%>
+            <li class="product">
+            <section class="spanParent1">
+                <span data-product-id="<%= products[i]._id %>">Fridge item name: <%= products[i].name %></span>
+                <span>Roommate responsible: <%= products[i].roommate %></span>
+                <span>Quantity: <%= products[i].quantity %></span>
+                <span>Description: <%= products[i].description %> </span>
+            </section>
+            <section class="spanParent2">
+                <span>Category: <%= products[i].category %></span>
+                <span>Expiration Date:<%= products[i].displayDate %></span>
+                <span>Date stored:<%= products[i].createdAt.toLocaleDateString('en-US', { timeZone: 'UTC' })%></span>
+            </section>
+            <section class="spanParent3">
+                <a href="/product/<%= products[i]._id %>">Edit</a>
+                <button data-product-id="<%= products[i]._id %>" class="remove">Remove from fridge</button>
+            </section>
+            
+            </li>
+          <% } %>
+          </ul>
+          <hr class="customLine">
+
+          <h2>Add a fridge item</h2>
+          <form action="/products" method="POST">
+            <section class="leftSide">
+                <label for="name">Fridge item name:</label>
+                    <input type="text" placeholder="tofu" name="name">
+                <label for="quantity">Quantity</label>
+                    <input type= "number" placeholder="2" min="1" name="quantity">
+                <label for="description">Description</label>
+                    <input type="text" placeholder="packs" name="description"> 
+            </section>
+            <section class="rightSide">
+                <label for="expirationDate">Expiry Date</label>
+                    <input type="date" name="expirationDate">
+                <label for="category">Food item category:</label>
+                <select name="category" id="categories">
+                    <option value="fruit">Fruit</option>
+                    <option value="protein">Protein</option>
+                    <option value="vegetable">Vegetable</option>
+                    <option value="leftovers">Leftovers</option>
+                    <option value="dairy">Dairy</option>
+                    <option value="sauces">Sauces</option>
+                    <option value="other">Other</option>
+            </select>
+            <button class="btnNewItem" type="submit">Submit</button>
+            </section>
+            
+          </form>
+        </div>
+
+</div>
+
+<script src="/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <title>Fridge Item Tracker</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col-sm-6 col-sm-offset-3">
+
+    <h1><span class="fa fa-sign-in"></span> Make Your Edits Below: </h1>
+    <ul>
+        <li class="oneList">
+            <label for="quantity">Quantity</label>
+            <input type= "number" id="quanNum" value="<%= product.quantity%>" placeholder="2" min="1" name="quantity"> 
+            <button data-quanNum-id="<%= product._id%>"class="save">Save Edits</button>
+        </li>
+    </ul>
+</div>
+</div>
+<script src="/product.js"></script>
+</body>
+</html>
