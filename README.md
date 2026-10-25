@@ -20,8 +20,8 @@ Not in this house!
 - Delete friddge items when you finish consuming them!
 (I know I know, you might delete because the food went bad...)
 
-![screenshot of login page](/public/img/loginPage.png)
-![screenshot of profile page](/public/img/profilePage.png)
+![screenshot of login page](/public/img/loginPageGreen.png)
+![screenshot of profile page](/public/img/profilePageGreen.png)
 
 ### Tech Used: 
 - Front-end: HTML, CSS, JavaScript 
