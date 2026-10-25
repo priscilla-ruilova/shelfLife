@@ -1,7 +1,8 @@
 const saveEdits = document.querySelector('.save').addEventListener('click', (event) => {
     const quanNum = document.querySelector('#quanNum').value
-    const productId = event.target.dataset.quannumId //this
-    console.log(quanNum)
+    const productId = event.target.dataset.Id 
+    console.log('HELP', event.target)
+    console.log()
     console.log(productId)
     fetch('/product', {
           method: 'put',

@@ -16,7 +16,7 @@ module.exports = function(app, passport, db, ObjectID) {
         res.status(500).json({ message: error.message })
     };
     });
-//// SHOWS EVERYTHING IN THE DATABASE =========================
+//// SHOWS ONE PRODUCT IN THE DATABASE =========================
     app.get('/product/:id', async function(req, res) {
       try {
         const { id } = req.params;

@@ -1,7 +1,7 @@
 body{
   padding-top:80px;
   word-wrap:break-word;
-  background-color: rgb(222, 191, 255);
+  background-color: rgb(118,182,181);
 }
 h1, h2, h3{
   color: rgb(82, 59, 59);
@@ -14,6 +14,10 @@ img{
   width:70%;
   margin-right: auto;
   margin-left: auto;
+}
+.jumbotron > span{
+  display: block;
+  font-size: 2.5rem;
 }
 img{
   min-height: 400px;
@@ -30,7 +34,7 @@ SIGNUP
 }
 /* PROFILE PAGE */
 .profileBackground{
-  background-image: url(img/retroFridge.avif);
+  background-image: url(img/greenFridge.avif);
   background-repeat: no-repeat;       
   background-position: center;      
   background-size: cover; 
@@ -144,14 +148,27 @@ span{
 }
 form{
   display: flex;
-  text-align: justify;
-  flex-direction: column;
-  width: 70%;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  /* width: 70%; */
   margin-left: auto;
   margin-right: auto;
+  font-size: 1.2rem;
+  gap: 2rem;
 }
+.leftSide{
+  display: flex;
+  flex-direction: column;
+}
+.rightSide{
+  display: flex;
+  flex-direction: column;
+}
+
 .btnNewItem{
   padding: 0.4rem 0.75rem;
+  margin-top: 2.4rem;
   font-weight: bolder;
   color: #0b5040;
   background: #91b4a6;
