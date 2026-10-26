@@ -29,4 +29,4 @@ Not in this house!
 - Database: MongoDB
 
 ### How to run project: 
-- Live link coming soon!
+- Live link to website: https://shelflife-0se8.onrender.com/
